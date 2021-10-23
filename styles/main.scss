@@ -1,0 +1,18 @@
+//Variables
+$primary-text-blue: hsl(238, 29%, 16%);
+$primary-text-red: hsl(14, 88%, 65%);
+
+$gradient-color-violet: hsl(273, 75%, 66%);
+$gradient-color-blue: hsl(240, 73%, 65%);
+
+$neutral-text-very-blue: hsl(237, 12%, 33%);
+$neutral-text-dark-blue: hsl(240, 6%, 50%);
+
+$divider: hsl(240, 5%, 91%);
+
+//Reset
+*,*::after,*::before{
+    margin: 0;
+    padding: 10;
+    box-sizing: border-box;
+}
