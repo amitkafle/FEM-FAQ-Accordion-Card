@@ -51,6 +51,8 @@ body {
 .header__mobile .banner__top {
   position: relative;
   top: 100px;
+  height: 210px;
+  width: 210px;
 }
 
 .header__desktop {

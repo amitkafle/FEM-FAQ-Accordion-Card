@@ -61,6 +61,8 @@ body {
     &__top {
       position: relative;
       top: 100px;
+      height: 210px;
+      width: 210px;
     }
   }
 }
@@ -153,7 +155,7 @@ body {
 
 //Media Query
 @media screen and (min-width: 1024px) {
-  body{
+  body {
     height: 100vh;
   }
   .container {
@@ -166,7 +168,7 @@ body {
     width: 850px;
     row-gap: 20px;
     max-height: 500px;
-     filter: drop-shadow(0 3px 0.4rem $neutral-text-very-blue);
+    filter: drop-shadow(0 3px 0.4rem $neutral-text-very-blue);
   }
 
   .header__mobile {

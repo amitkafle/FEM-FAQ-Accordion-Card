@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/faq-accordion-card-using-html-css-and-javascript-6sbGso2_1)
 - Live Site URL: [Github Pages](https://amitkafle.github.io/FEM-FAQ-Accordion-Card)
 
 ### My process
