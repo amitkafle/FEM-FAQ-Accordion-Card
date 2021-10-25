@@ -1,5 +1,214 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
-  padding: 10;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Kumbh Sans, sans-serif;
+  background: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 8rem 1.5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 50px 20px;
+  padding-bottom: 30px;
+  border-radius: 25px;
+  position: relative;
+  height: 100%;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  transition: all 0.5s ease;
+}
+
+.header__mobile {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__mobile .banner {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: -270px;
+}
+.header__mobile .banner__top {
+  position: relative;
+  top: 100px;
+}
+
+.header__desktop {
+  display: none;
+}
+
+.faq {
+  padding-top: 5rem;
+  height: 100%;
+}
+.faq__title {
+  text-align: center;
+  color: #1d1e35;
+  padding-bottom: 1.8rem;
+  font-weight: 700;
+  font-weight: 2rem;
+}
+.faq__item {
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e7e7e9;
+}
+.faq__item .item__indicator {
+  margin-left: 20px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.faq__question {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #4a4b5e;
+  cursor: pointer;
+  transition: 0.3s color ease;
+}
+.faq__question:hover {
+  color: #f47c57;
+}
+.faq__answer {
+  color: #787887;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.collapsed {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.active__faq .faq__question {
+  font-weight: 700;
+}
+.active__faq .item__indicator {
+  transform: rotate(180deg);
+  transition: 0.5s ease;
+}
+.active__faq .faq__answer {
+  -webkit-animation: show-answer 0.3s ease forwards;
+          animation: show-answer 0.3s ease forwards;
+}
+@-webkit-keyframes show-answer {
+  from {
+    visibility: hidden;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+  }
+}
+@keyframes show-answer {
+  from {
+    visibility: hidden;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "banner faq";
+    place-items: center;
+    justify-content: center;
+    width: 850px;
+    row-gap: 20px;
+    max-height: 500px;
+    filter: drop-shadow(0 3px 0.4rem #4a4b5e);
+  }
+
+  .header__mobile {
+    display: none;
+  }
+
+  .header__desktop {
+    position: relative;
+    display: inline-block;
+    grid-area: banner;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .header__desktop .banner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+  .header__desktop .banner__box {
+    position: absolute;
+    transform: translate(-48%, 105%);
+    z-index: 999;
+  }
+  .header__desktop .banner__top {
+    position: absolute;
+    width: auto;
+    transform: translate(-16%, 15%);
+    z-index: 2;
+  }
+  .header__desktop .banner__bottom {
+    transform: translate(-59%, -32%);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .faq {
+    padding: 4rem 3rem 5rem 2rem;
+    grid-area: faq;
+    height: 100%;
+  }
+  .faq__title {
+    text-align: left;
+  }
+  .faq__item {
+    width: 300px;
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */
